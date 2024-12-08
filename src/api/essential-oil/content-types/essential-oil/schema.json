@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "essential_oils",
   "info": {
-    "singularName": "product",
-    "pluralName": "products",
-    "displayName": "Products",
+    "singularName": "essential-oil",
+    "pluralName": "essential-oils",
+    "displayName": "Essential Oil",
     "description": ""
   },
   "options": {
@@ -17,7 +17,7 @@
       "required": true
     },
     "price": {
-      "type": "decimal",
+      "type": "integer",
       "required": true
     },
     "description": {
@@ -25,15 +25,15 @@
       "required": true
     },
     "image": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
     },
     "specialnote": {
       "type": "boolean",
@@ -41,18 +41,12 @@
     },
     "marknewproduct": {
       "type": "boolean",
-      "required": false,
-      "default": false
+      "default": false,
+      "required": true
     },
     "volume": {
       "type": "string",
       "required": true
-    },
-    "categories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::categorie.categorie",
-      "inversedBy": "products"
     }
   }
 }

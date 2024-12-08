@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "candles",
+  "info": {
+    "singularName": "candle",
+    "pluralName": "candles",
+    "displayName": "Candle"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "price": {
+      "type": "integer"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "specialnote": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "marknewproduct": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "size": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

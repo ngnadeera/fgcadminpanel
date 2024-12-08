@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "insence_oils",
   "info": {
-    "singularName": "product",
-    "pluralName": "products",
-    "displayName": "Products",
-    "description": ""
+    "singularName": "insence-oil",
+    "pluralName": "insence-oils",
+    "displayName": "Insence Oil"
   },
   "options": {
     "draftAndPublish": true
@@ -17,7 +16,8 @@
       "required": true
     },
     "price": {
-      "type": "decimal",
+      "type": "integer",
+      "unique": false,
       "required": true
     },
     "description": {
@@ -25,34 +25,29 @@
       "required": true
     },
     "image": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
     },
     "specialnote": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "required": true
     },
     "marknewproduct": {
       "type": "boolean",
-      "required": false,
-      "default": false
+      "default": false,
+      "required": true
     },
     "volume": {
       "type": "string",
       "required": true
-    },
-    "categories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::categorie.categorie",
-      "inversedBy": "products"
     }
   }
 }
